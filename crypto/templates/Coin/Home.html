@@ -1,0 +1,33 @@
+{% extends "Coin/base.html" %}
+{% block content %}
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to Crypto-Currency-Times</h1>
+      <p class="lead">stay updated about Crypto Currency and Blockchains</p>
+      </p>
+    </div>
+  </div>
+
+  {% for key, value in price.DISPLAY.items %}
+    {{key}} : {{value}} <br/>
+  {% endfor %}
+
+  <div class="container">
+    <div class="row">
+      {% for n in news.Data %}
+      <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src={{n.imageurl}} alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{n.title}}</h5>
+            <p class="card-text">{{n.body}}</p>
+            <a href={{n.url}} class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+        <br/>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}
