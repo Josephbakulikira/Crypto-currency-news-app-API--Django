@@ -8,9 +8,7 @@
     </div>
   </div>
 
-  {% for key, value in price.DISPLAY.items %}
-    {{key}} : {{value}} <br/>
-  {% endfor %}
+
 
   <div class="container">
     <div class="row">
@@ -29,5 +27,8 @@
       {% endfor %}
     </div>
   </div>
+  {% for key, value in price.DISPLAY.items %}
+    {{key}} : {{value}} <br/>
+  {% endfor %}
 
 {% endblock %}
